@@ -39,3 +39,48 @@ export const WelcomeDescription = styled.p`
 font-size: 2em;
 padding: 0px 30px;
 `;
+
+
+export const ListWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: Wrap;
+  margin-bottom: 2em;
+`;
+
+export const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border: ${({ theme }) => theme.borderColor} solid 3px;
+  margin: 4px;
+  border-radius: 10px;
+  background: ${({ theme }) => theme.mainColor};
+
+  p {
+    color: ${({ theme }) => theme.textColor};
+    margin-top: 1em;
+    font-weight: Bolder;
+    text-align: center;
+    font-size: 20px;
+    :hover {
+      cursor: default;
+    }
+  }
+
+  .item-price {
+    color: #27ae60;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+  }
+`;
+
+export const ShopImage = styled.img`
+  height: 400px;
+  width: 250px;
+  border-bottom: ${({ theme }) => theme.borderColor} solid 3px;
+  border-radius: 10px;
+`;

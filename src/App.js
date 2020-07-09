@@ -1,22 +1,29 @@
 //Recat
-import React from "react";
+import React, { useState } from "react";
+import { Route, Switch } from "react-router";
+
+//components
+import Home from "./components/Home";
+import BrandList from "./components/BrandList";
+import brands from "./brands";
 
 //Styles
-import {
-  GlobalStyle,
-  HomePageWrapper,
-  Welcome,
-  WelcomeDescription,
-} from "./styles";
+import { GlobalStyle } from "./styles";
 
 function App() {
+  const [_brands, setBrands] = useState(brands);
+
   return (
     <>
-      <HomePageWrapper>
-        <GlobalStyle />
-        <Welcome>Welcome</Welcome>
-        <WelcomeDescription>This is your guide to brnads</WelcomeDescription>
-      </HomePageWrapper>
+      <GlobalStyle />
+      <Switch>
+        <Route exact path="/brands">
+          <BrandList brands={_brands} />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </>
   );
 }
