@@ -11,7 +11,9 @@ const Home = () => {
       <HomePageWrapper>
         <title>Welcome to our store</title>
         <Welcome>Welcome</Welcome>
-        <WelcomeDescription>This is your guide to brnads</WelcomeDescription>
+        <WelcomeDescription>
+          This is your guide to brnads
+        </WelcomeDescription>
       </HomePageWrapper>
     </>
   );

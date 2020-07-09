@@ -11,34 +11,33 @@ body {
     padding: 0;
     user-drag: none;
     user-select: none;
-    background-color: #EAF0F1;
+    background-image: url(https://i.pinimg.com/originals/23/d7/4e/23d74e06260d45a85d81e9a877a0c0f2.jpg);
 }
 `;
 
 export const HomePageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  background-color: #a4b0bd;
-  justify-content: center;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5em;
-  width: 80%;
+  background-color: #dfe4ea;
+  margin: auto;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  width: 80vw;
   border: black solid 2px;
   border-radius: 20px;
-  height: 400px;
 `;
 
 export const Welcome = styled.h1`
-  font-size: 4em;
-  padding: 0px 30px;
+  margin-top: 2vh;
+  font-size: 12vw;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
 `;
 
 export const WelcomeDescription = styled.p`
-  font-size: 2em;
-  padding: 0px 30px;
+  margin-top: 2vh;
+  font-size: 6vw;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
 `;
 
 export const ListWrapper = styled.div`
@@ -46,25 +45,13 @@ export const ListWrapper = styled.div`
   justify-content: center;
   flex-wrap: Wrap;
   margin-bottom: 2em;
-`;
-
-export const ItemWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  border: ${({ theme }) => theme.borderColor} solid 3px;
-  margin: 4px;
-  border-radius: 10px;
-  background: ${({ theme }) => theme.mainColor};
 
   p {
-    color: ${({ theme }) => theme.textColor};
+    color: black;
     margin-top: 1em;
     font-weight: Bolder;
     text-align: center;
-    font-size: 20px;
+    font-size: 13px;
     :hover {
       cursor: default;
     }
@@ -78,31 +65,42 @@ export const ItemWrapper = styled.div`
   }
 `;
 
+export const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border: black solid 2px;
+  margin: 4px;
+  border-radius: 5px;
+  background: #fff;
+`;
+
 export const ShopImage = styled.img`
-  height: 400px;
-  width: 250px;
-  border-bottom: ${({ theme }) => theme.borderColor} solid 3px;
+  height: 20vw;
+  width: 20vw;
   border-radius: 10px;
 `;
 
 export const Logo = styled(Link)`
-  padding: 0.75em;
-
   img {
-    width: 8rem;
+    width: 10rem;
   }
 `;
 export const NavItem = styled(NavLink)`
   padding: 0.25em 1em;
-  color: blue;
+  color: #7b8788;
 
   &.active {
-    color: pink;
+    color: black;
+    text-decoration: underline;
   }
 `;
 
 export const NavStyled = styled.nav`
   background-color: white;
+  margin-bottom: 5vh;
 `;
 
 export const DetailWrapper = styled.div`
@@ -114,4 +112,21 @@ export const DetailWrapper = styled.div`
     width: 40%;
     float: left;
   }
+`;
+
+export const SearchWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
+
+export const Search = styled.input`
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 60%;
+  font-size: 100%;
+  padding: 11px;
+  border: black 2px solid;
+  border-radius: 15px;
+  outline: none;
 `;
