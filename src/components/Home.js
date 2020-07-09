@@ -1,6 +1,6 @@
 //React
 import React from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 //Styles
 import { HomePageWrapper, Welcome, WelcomeDescription } from "../styles";
@@ -9,11 +9,10 @@ const Home = () => {
   return (
     <>
       <HomePageWrapper>
-          <title>Welcome to our store</title>
+        <title>Welcome to our store</title>
         <Welcome>Welcome</Welcome>
         <WelcomeDescription>This is your guide to brnads</WelcomeDescription>
       </HomePageWrapper>
-
     </>
   );
 };
