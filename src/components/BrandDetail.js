@@ -4,7 +4,6 @@ import { useParams, Redirect, useHistory, Link } from "react-router-dom";
 //Styles
 import {
   DetailWrapper,
-  RecommendedImage,
   RecommendedImageWrapper,
   RecommendedImageStyling,
 } from "../styles";
@@ -23,18 +22,24 @@ const BrandDetail = (props) => {
   if (!brand) return <Redirect to="/brands" />;
 
   const recommandationFiltred = props.brands.filter((brand) => {
-    if (brand.type === "Bag") {
-      return brand.bagImage;
-    } if (brand.type === "Wallet") {
-      return brand.walletImage; 
-    } else return null ;
+    // returns an array of type == brand.type specified
+    if (props.brands.length === 4) {
+      return null;
+    } else {
+      if (brand.type === "Bag") {
+        return brand.image;
+      } else {
+        return null;
+      }
+    }
   });
-  // brand.type === "Shoe" ? brand.image : null
 
-  const recommandationBrandList = recommandationFiltred.map((brand) => (
+  const recommandationBrandList = recommandationFiltred.slice(0, 4).map((
+    brand // Links to the item in the rec list
+  ) => (
     <RecommendedImageStyling>
       <Link to={`/brands/${brand.slug}`}>
-        <RecommendedImage src={brand.image} />
+        <img src={brand.image} />
       </Link>
     </RecommendedImageStyling>
   ));
@@ -42,13 +47,13 @@ const BrandDetail = (props) => {
   return (
     <DetailWrapper>
       <p onClick={goBack}>Back to Brands</p>
-      <h1> {brand.name}</h1>
-      <img src={brand.image} alt={brand.name} />
-      <p>{brand.description}</p>
+      <h1> {brand.name}</h1> {/*header*/}
+      <img src={brand.image} alt={brand.name} /> {/*image of the item*/}
+      <p>{brand.description}</p> {/*item desc*/}
       <p>{brand.price}</p>
       <p>Recommended</p>
       <RecommendedImageWrapper>
-        {recommandationBrandList}
+        {recommandationBrandList} {/*Where we are calling the rec list*/}
       </RecommendedImageWrapper>
     </DetailWrapper>
   );

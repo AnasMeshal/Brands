@@ -107,20 +107,31 @@ export const NavStyled = styled.nav`
   margin-bottom: 5vh;
 `;
 
-export const RecommendedImage = styled.img`
-width: 15vw;
-`;
+// export const RecommendedImage = styled.img`
+//   width: 15vw; //vw: viwer width/height
+//   height: 15vw;
+// `;
 
 export const RecommendedImageStyling = styled.div`
-border: solid  1px black;
-margin-left: 5px;
-margin-right: 5px;
-margin-bottom: 5px;
+  border: solid 1px white;
+  background-color: white;
+  border-radius: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  img {
+    width: 13vw; //vw: viwer width/height
+    height: 13vw;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 `;
 
 export const RecommendedImageWrapper = styled.div`
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5vh;
 `;
 
 export const Search = styled.input`
@@ -164,4 +175,3 @@ export const WelcomeDescription = styled.p`
   font-weight: 400;
   color: white;
 `;
-
