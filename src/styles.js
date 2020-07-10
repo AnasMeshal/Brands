@@ -107,6 +107,22 @@ export const NavStyled = styled.nav`
   margin-bottom: 5vh;
 `;
 
+export const RecommendedImage = styled.img`
+width: 15vw;
+`;
+
+export const RecommendedImageStyling = styled.div`
+border: solid  1px black;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+`;
+
+export const RecommendedImageWrapper = styled.div`
+display: flex;
+flex-direction: row;
+`;
+
 export const Search = styled.input`
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -148,3 +164,4 @@ export const WelcomeDescription = styled.p`
   font-weight: 400;
   color: white;
 `;
+
