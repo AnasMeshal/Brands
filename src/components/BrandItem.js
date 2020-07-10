@@ -15,8 +15,8 @@ const BrandItem = ({ brand }) => {
         <ShopImage src={brand.image} alt={brand.name} />
       </Link>
       <p>{brand.name}</p>
-      <p className="item-price">{brand.price}KD</p>
-    </ItemWrapper>
+      <p className="item-price">{brand.price}</p>
+      </ItemWrapper>
   );
 };
 

@@ -10,8 +10,8 @@ const Home = () => {
     <>
       <HomePageWrapper>
         <title>Welcome to our store</title>
-        <Welcome>Welcome</Welcome>
-        <WelcomeDescription>This is your guide to brands</WelcomeDescription>
+        <Welcome>Brands Guide</Welcome>
+        <WelcomeDescription>Premium Brands.</WelcomeDescription>
       </HomePageWrapper>
     </>
   );

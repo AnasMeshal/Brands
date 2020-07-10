@@ -12,7 +12,7 @@ import BrandDetail from "./components/BrandDetail";
 import NavBar from "./components/NavBar";
 
 //Styles
-import { GlobalStyle } from "./styles";
+import { GlobalStyle, Test } from "./styles";
 
 function App() {
   const [_brands, setBrands] = useState(brands);
@@ -20,6 +20,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+
       <NavBar />
       <Switch>
         <Route path="/brands/:brandSlug">
