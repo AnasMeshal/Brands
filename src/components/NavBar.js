@@ -10,7 +10,7 @@ import { NavStyled, Logo, NavItem } from "../styles";
 const NavBar = () => {
   return (
       //changed the logo sizing
-    <NavStyled className="navbar navbar-expand"> 
+    <NavStyled className="navbar fixed-top navbar-expand"> 
       <Logo to="/">
         <img
           src={logo}
@@ -18,16 +18,11 @@ const NavBar = () => {
         />
       </Logo>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item m-auto">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item m-auto">
             <NavItem className="nav-link" to="/brands">
               Brands
-            </NavItem>
-          </li>
-          <li class="nav-item m-auto">
-            <NavItem className="nav-link" to="/">
-              Home
             </NavItem>
           </li>
         </ul>

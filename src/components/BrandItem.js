@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 //Styles
 import { ShopImage, ItemWrapper } from "../styles";
 
-//Components
-// import DeleteButton from "./buttons/DeleteButton";
-
 const BrandItem = ({ brand }) => {
   return (
     <ItemWrapper>

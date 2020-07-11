@@ -1,29 +1,28 @@
 //React
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router";
 
 //components
 import Home from "./components/Home";
 import BrandList from "./components/BrandList";
-import brands from "./brands";
+import NavBar from "./components/NavBar";
 import BrandDetail from "./components/BrandDetail";
 
 //Data
-import NavBar from "./components/NavBar";
+import brands from "./brands";
 
 //Styles
-import { GlobalStyle, Test } from "./styles";
+import { GlobalStyle } from "./styles";
 
 function App() {
-  const [_brands, setBrands] = useState(brands);
+  const _brands = brands;
 
   return (
     <>
       <GlobalStyle />
-
       <NavBar />
       <Switch>
-        <Route path="/brands/:brandSlug">
+        <Route exact path="/brands/:brandSlug">
           <BrandDetail brands={_brands} />
         </Route>
         <Route exact path="/brands">

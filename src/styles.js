@@ -10,6 +10,7 @@ export const DetailWrapper = styled.div`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15vh;
   border: white solid 3px;
   border-radius: 20px;
   color: white;
@@ -35,14 +36,30 @@ body {
     background-size: cover;
     background-image: url(https://cdn.pixabay.com/photo/2016/11/23/17/08/bag-1853847_1280.jpg);
 }
+`;
 
+export const GoBack = styled.p`
+  padding: 0.5vh 2vw;
+  border: white solid 1px;
+  width: 20vw;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+  :hover {
+    background-color: #fff;
+    color: black;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
 `;
 
 export const HomePageWrapper = styled.div`
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   margin: auto;
-  margin-top: 15vh;
+  margin-top: 25vh;
   margin-bottom: 15vh;
   width: 80vw;
   border: white solid 3px;
@@ -64,7 +81,7 @@ export const ListWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: Wrap;
-  //margin-bottom: 2em;
+  margin-bottom: 2vh;
 
   p {
     color: black;
@@ -87,14 +104,14 @@ export const ListWrapper = styled.div`
 export const Logo = styled(Link)`
   img {
     width: 10rem;
-    position: absolute;
-    left: 45%;
   }
 `;
 
 export const NavItem = styled(NavLink)`
   padding: 0.25em 1em;
   color: white;
+  font-size: 1.5vw;
+
   &.active {
     color: white;
     border: white 2px solid;
@@ -103,8 +120,7 @@ export const NavItem = styled(NavLink)`
 `;
 
 export const NavStyled = styled.nav`
-  background: transapent;
-  margin-bottom: 5vh;
+  background: rgba(0, 0, 0, 0.4);
 `;
 
 // export const RecommendedImage = styled.img`
@@ -124,6 +140,7 @@ export const RecommendedImageStyling = styled.div`
     height: 13vw;
     margin-left: 5px;
     margin-right: 5px;
+    border-radius: 15px;
   }
 `;
 
@@ -148,6 +165,7 @@ export const SearchWrapper = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 15vh;
 `;
 
 export const ShopImage = styled.img`
