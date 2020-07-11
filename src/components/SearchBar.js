@@ -8,7 +8,7 @@ const SearchBar = ({ setQuery }) => {
   return (
     <SearchWrapper>
       <Search
-        placeholder="Search for your brand Type, name, Material or price"
+        placeholder="Search for your brand Type, Name, Material or Price"
         onChange={(event) => setQuery(event.target.value)}
       />
     </SearchWrapper>
