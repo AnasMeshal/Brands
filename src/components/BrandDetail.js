@@ -30,8 +30,8 @@ const BrandDetail = ({ brands }) => {
       <p>{brand.description}</p> {/*item desc*/}
       <p>Material: {brand.material}</p>
       <p>Size: {brand.size}</p>
-      <p>{brand.price}</p>
-      <p>Recommended</p>
+      <p>Price: {brand.price}</p>
+      <p style={{ fontWeight: "bold" }}>Recommended Items</p>
       <RecommendedList brand={brand} brands={brands} />
       {/*Where we are calling the rec list*/}
       <GoBack onClick={goBack}>Back to Brands</GoBack>

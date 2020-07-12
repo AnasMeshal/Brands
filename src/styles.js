@@ -120,7 +120,14 @@ export const NavItem = styled(NavLink)`
 `;
 
 export const NavStyled = styled.nav`
-  background: rgba(0, 0, 0, 0.4);
+  background-color: ${(props) => {
+    if (props.offset > 50) {
+      return "rgba(0, 0, 0, 0.5);";
+    } else {
+      return "transparent";
+    }
+  }};
+  transition: 0.5s ease-in;
 `;
 
 // export const RecommendedImage = styled.img`
